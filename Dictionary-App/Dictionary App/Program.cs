@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
-internal class Program
+internal class Titi
 {
     static Dictionary<string, string> DictionaryApp = new();
 
@@ -43,25 +43,47 @@ internal class Program
         Console.WriteLine("What's the meaning of the word: ");
         var meaningOfTheWord = Console.ReadLine();
 
-        DictionaryApp.Add(newWord, meaningOfTheWord);
+        DictionaryApp.Add(newWord!, meaningOfTheWord!);
 
-      
-       ( "eat": "to consume something solid or semi-solid, usually food through the mouth"),
-       ( "drink": "to consume liquid through the mouth" );
 
-        string eat = "none";
-        if (newWord. (eat, out eat))
-            (
-                Console.WriteLine("Found value: " + eat);
         ShowAddScreen();
-        
-        
-        
+
+
+
     }
 
 
+
+    static void DeleteInformation(string deletingWord)
+
+    {
+
     }
 
+    void ShowDeleteScreen(object deleteWord)
+        
+    {
+
+        Console.WriteLine("=============================");
+        Console.WriteLine("[[DELETING A WORD]]");
+        Console.WriteLine("[[Delete a word: ]]");
+        var deleteWord = Console.ReadLine();
+
+        Console.WriteLine("delete information about a word");
+        var deleteInformation = Console.ReadLine();
+
+
+        DictionaryApp.Remove(deleteWord, DeleteInformation);
+
+        ShowDeleteScreen();
+    
 
 
 
+}
+
+    void ShowDeleteScreen()
+    {
+
+    }
+}
