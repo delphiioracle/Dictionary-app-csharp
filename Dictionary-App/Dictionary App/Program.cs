@@ -35,6 +35,9 @@ internal class Program
                     break;
                 default:
                     break;
+                case "3":
+                    ShowEditScreen();
+                    break;
 
             }
 
@@ -61,29 +64,31 @@ internal class Program
         DictionaryApp.Add(newWord, meaningOfTheWord);
 
         ShowAddScreen();
-
-        static void DeleteInformation(string deletingWord)
-        {
-
-        }
-
-        static void ShowDeleteScreen()
-        {
-            Console.WriteLine("[[DELETING A WORD]]");
-            Console.WriteLine("[[Delete a word: ]]");
-            string deleteWord = Console.ReadLine();
-
-            DictionaryApp.Remove(deleteWord);
-
-            ShowDeleteScreen();
-        }
-
-
     }
-}
+       public static void ShowDeleteScreen()
+       {
+            string deleteWord = "";
+            while (string.IsNullOrWhiteSpace(deleteWord))
+
+            {
+                Console.WriteLine("[[DELETING A WORD]]");
+                Console.WriteLine("[[Delete a word: ]]");
+                string deletingWord = Console.ReadLine();
+
+                DictionaryApp.Remove(deleteWord);
+
+                ShowDeleteScreen();
+            }
+       }
 
 
-    
+
+   
+
+
+
+
+
 
 
 
