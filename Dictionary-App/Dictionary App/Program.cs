@@ -80,10 +80,24 @@ internal class Program
 
 
     }
-}
 
 
-    
+    public static void ShowEditScreen()
+    {
+        string newMeaning = "";
+
+        while (string.IsNullOrWhiteSpace(newMeaning))
+        {
+            Console.WriteLine("[[EDITING A WORD]]");
+            Console.WriteLine("[[Edit a word: ]]");
+            newMeaning = Console.ReadLine();
+
+            DictionaryApp.Edit(newMeaning);
+
+            ShowEditScreen();
+        }
+    }
+
 
 
 
