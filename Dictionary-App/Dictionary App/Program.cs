@@ -39,6 +39,9 @@ internal class Program
                 case "4":
                     ShowViewScreen();
                     break;
+                case "5":
+                    ShowSearchScreen();
+                    break;
 
             }
 
@@ -112,6 +115,18 @@ internal class Program
 
         ShowViewScreen();
     }
+
+    public static void ShowSearchScreen()
+    {
+        Console.WriteLine("[[SEARCHING FOR A WORD]]");
+        Console.WriteLine("[[Search for a word: ]]");
+        string searchWord = Console.ReadLine();
+
+        DictionaryApp.Search(searchWord);
+
+        ShowSearchScreen();
+    }
+}
 
 
 
