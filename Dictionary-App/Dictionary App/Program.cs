@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
-internal class Titi
+internal class Program
 {
     static List<string> words = new List<string>();
     private static string word;
@@ -25,35 +25,36 @@ internal class Titi
                 Console.WriteLine("Please enter an option:");
                 var option = Console.ReadLine();
                 // depending on the option, we will do different things.
-                if (option == "1")
-                {
+                switch (option)
+            {
+                case "1":
                     ShowAddScreen();
-                    Menu();
-                }
+                    break;
+
+            }
+            
                 
             
             }
     }
     public static void ShowAddScreen()
     {
-        Console.WriteLine("===========================");
-        Console.WriteLine("[[ADDING A NEW WORD]]");    
-        Console.WriteLine("Add a new word: ");
-        string newWord = Console.ReadLine();
-
-        Console.WriteLine("What's the meaning of the word: ");
-        var meaningOfTheWord = Console.ReadLine();
+        string newWord = "";
+            while (string .IsNullOrWhiteSpace(newWord))
+        {
+            Console.WriteLine("[[ADDING A NEW WORD");
+            Console.WriteLine("Add a new word: ");
+            newWord = Console.ReadLine();
+        }
+        string meaningOfTheWord = "";
+        while (string .IsNullOrWhiteSpace(meaningOfTheWord))
+        {
+            Console.WriteLine("What is the meaning of the word: ");
+            meaningOfTheWord = Console.ReadLine();
+        }
 
         DictionaryApp.Add(newWord, meaningOfTheWord);
 
-      
-       ( "eat": "to consume something solid or semi-solid, usually food through the mouth"),
-       ( "drink": "to consume liquid through the mouth" );
-
-        string eat = "none";
-        if (newWord. (eat, out eat))
-            (
-                Console.WriteLine("Found value: " + eat);
         ShowAddScreen();
         
         
