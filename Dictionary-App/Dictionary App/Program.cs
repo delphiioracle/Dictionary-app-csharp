@@ -33,7 +33,11 @@ internal class Program
                 case "2":
                     ShowDeleteScreen();
                     break;
-                default:
+                case "3":
+                    ShowEditScreen();
+                    break;
+                case "4":
+                    ShowViewScreen();
                     break;
 
             }
@@ -96,6 +100,17 @@ internal class Program
 
             ShowEditScreen();
         }
+    }
+
+    public static void ShowViewScreen()
+    {
+        Console.WriteLine("[[VIEWING A WORD]]");
+        Console.WriteLine("[[View a word: ]]");
+        string viewWord = Console.ReadLine();
+
+        DictionaryApp.View(viewWord);
+
+        ShowViewScreen();
     }
 
 
